@@ -1,5 +1,6 @@
-// null 관련 연산자와 타입 비교 연산자
+// null 인지 연산자(Null-aware Operator)와 타입 비교 연산자
 // null은 아무 값도 없음을 의미하는 키워드로 0과는 다르다.
+// https://dart.dev/null-safety/understanding-null-safety
 // https://dart.dev/language/operators#other-operators
 void main() {
   // 다트 언어에서는 변수가 null 값을 가질 수 있는지를 명시적으로 지정해야 한다.
@@ -18,14 +19,19 @@ void main() {
   // (Not-null 단언 연산자, Not-null assertion operator)를 붙여서 이 변수가
   // null이 아님을 단언해야 컴파일 할 수 있다. 하지만 변수가 null일 경우
   // 런타임 익셉션을 발생시킨다.
-  num3 = num3! + 1; //num3 = num3 + 1; // 오류 발생
+  //num3 = num3! + 1; //num3 = num3 + 1; // 오류 발생  
 
-  // 대입 연산자 앞에 ??를 사용하면 변수 값이 null일 때만 값이 저장된다.
-  num1 ??= 10;
-  num3 ??= 5;
-  print(num1);
-  print(num3);
+  // ?.(Null-aware Operator) 연산자는 객체가 null이 아닌 경우만 속성에 접근한다.
+  print("num3?. : ${num3?.toDouble()}");
 
+  // ??(Null Coalescing) 연산자는 왼쪽 변수가 null인 경우 오른쪽 값을 반환한다.
+  print("num3 ?? 10 : ${num3 ?? 10}");
+
+  // ??=(Assignment if Null) 연산자는 변수 값이 null일 때만 값을 할당한다.
+  print("num1 ??= 10 : ${num1 ??= 10}");
+  print("num3 ??= 5 : ${num3 ??= 5 }");
+  print("num3?. : ${num3?.toDouble()}");
+  
   // is 연산자는 변수가 지정한 타입인지 비교하여 논리 값을 반환한다.
   // 다음은 변수 num1이 int 타입이면 true를 int가 아니면 false를 반환한다.
   print(num1 is int);
@@ -33,6 +39,6 @@ void main() {
 
   // is! 연산자는 변수가 지정한 타입이 아닌지 비교하여 논리 값을 반환한다.
   // 다음은 변수 num3가 int가 아니면 true를 int 타입이면 false를 반환한다.
-  print(num3 is! int);
   print(num3 is! bool);
+  print(num3 is! int);
 }

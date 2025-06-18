@@ -11,6 +11,7 @@ void main() {
   } catch(e) {
     // try 블럭에서 예외가 발생하여 4번이 출력됨
     print("4번");
+    print(e);
 
   } finally {
     // finally 블록은 필요하지 않으면 생략할 수 있다.

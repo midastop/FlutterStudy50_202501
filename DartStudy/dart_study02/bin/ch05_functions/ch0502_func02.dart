@@ -12,11 +12,11 @@ void main() {
   print(greeting2(name: "이순신"));
 }
 
-/* 함수에서 매개변수(parameter)를 지정하는 방식으로 순서가 있는 매개변수를
- * 사용하는 방식과 이름을 부여하여 매개변수를 사용하는 방식이 있다.
+/* 함수에서 매개변수(parameter)를 사용하는 방식에는 순서가 있는 매개변수를
+ * 사용하는 방식과 매개변수에 이름을 지정해 사용하는 방식이 있다.
  * 아래 studentInfo1() 함수와 같이 순서가 있는 매개변수를 사용하는 방식을
  * 포지셔널 파라미터(positional parameter)라고 부른다. 이 방식은 순서를
- * 기반으로 하기 때문에 위치 매개변수라고도 한다.
+ * 기반으로 하기 때문에 위치 매개변수라고도 부른다.
  **/
 String studentInfo1(String name, int grade) {
   return "$name은 $grade 학년";

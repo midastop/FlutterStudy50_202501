@@ -6,15 +6,15 @@ class Tv {
   int? channel;
 
   // 생성자 이름은 클래스 이름과 동일해야 한다.
-  //Tv(String name, int channel) {
-  //  this.name = name; this.channel=channel; }
+  //Tv(name, int channel) { this.name =name; this.channel=channel; }
 
   // 위의 생성자를 중괄호 없이 콜론(:) 기호를 사용해 다음과 같이 정의할 수 있다.
   // 다트는 자바나 C++ 처럼 메소드 오버로딩을 지원하지 않는다.
-  // Tv(String name) : this.name = name, this.channel = channel;
+  //Tv(String name, int channel) : this.name = name, this.channel = channel;
 
-  // 위의 생성자를 다음과 같이 간단히 정의할 수 있으며 매개변수로 받은 값이
-  // 자동으로 인스턴스 변수에 할당된다. this는 자신의 인스턴스를 가리키는 변수 이다.
+  // 위의 생성자를 다음과 같이 간단히 정의할 수 있으며 생성자의 몸체가 실행되기
+  // 전에 매개변수로 받은 값이 자동으로 인스턴스 변수에 할당된다. 
+  // this는 자신의 인스턴스를 가리키는 자기 참조 변수 이다.
   Tv(this.name, this.channel);
 
   void power() {

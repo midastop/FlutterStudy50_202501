@@ -7,12 +7,14 @@ void main() {
 
   List<String> members = ["홍길동", "이순신", "임꺽정"];
 
-  // 두 함수 모두 아래와 같이 다른 함수의 인수로 함수를 지정할 때 사용한다.
+  // 익명 함수는 아래와 같이 다른 함수의 인수로 함수를 지정해야할 때 많이 사용한다.
   final allMembers1 = members.reduce((value, element) {
     return value + ", " + element;
   });
   print(allMembers1);
 
+  // 람다 함수도 다른 함수의 인수로 함수를 지정해야할 때 많이 사용한다.
+  // 화살표를 사용하기 때문에 화살표 함수(arrow function)라고도 한다.
   final allMembers2 = members.reduce(
           (value, element) => value  + ", " + element);
   print(allMembers2);
