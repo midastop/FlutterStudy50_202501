@@ -5,6 +5,7 @@ void main() {
   runApp(MyApp());
 }
 
+// StatefulWidget으로 상태 관리하기
 class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
@@ -19,7 +20,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     // MaterialApp은 Material 디자인을 사용할 수 있도록 지원하는 위젯으로
     // Flutter 앱에서 항상 최상위에 MaterialApp 위젯을 사용해야 한다.
-    return MaterialApp(  // Root Widget
+    return MaterialApp(
+      // Root Widget
       // 화면 우측 상단에 표시되는 DEBUG 베너 제거 설정
       debugShowCheckedModeBanner: false,
 
@@ -63,6 +65,8 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
+            // setState() 함수 안에서 상태를 변경하면 Flutter 프레임워크에게 전달되고
+            // 변경된 상태를 기반으로 build() 함수를 다시 실행시켜서 화면을 갱신한다.
             setState(() {
               _count++;
             });

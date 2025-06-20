@@ -5,12 +5,8 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+// StatelessWidget에서 상태 증가 시켜 보기
+class MyApp extends StatelessWidget {
   //const MyApp({super.key});
   int _count = 0;
 
