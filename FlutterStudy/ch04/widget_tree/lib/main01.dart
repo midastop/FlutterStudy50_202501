@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 
 void main() {
   // 플러터 앱을 실행해 주는 함수
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  //const MyApp({super.key});
-  int _count = 0;
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,7 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "push : $_count",
+                "Text Widget",
                 style: TextStyle(
                   fontSize: 30,
                   color: Color(0xFF963AC1),
@@ -63,10 +62,7 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            setState(() {
-              _count++;
-            });
-            print("플로팅 버튼 클릭됨 : $_count");
+            print("플로팅 버튼 클릭됨");
           },
           tooltip: 'Increment',
           child: const Icon(Icons.add),

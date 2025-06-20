@@ -63,9 +63,7 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            setState(() {
-              _count++;
-            });
+            _count++;
             print("플로팅 버튼 클릭됨 : $_count");
           },
           tooltip: 'Increment',
