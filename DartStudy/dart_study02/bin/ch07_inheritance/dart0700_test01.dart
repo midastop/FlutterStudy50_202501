@@ -1,11 +1,11 @@
 // 객체지향 상속 extends, implements 테스트
-import "ch0703_abstract01.dart";
+import "dart0703_abstract01.dart";
 
 class Phone {
   String? name;
 
   setName(String name) {
-   this.name = name;
+    this.name = name;
   }
 }
 
