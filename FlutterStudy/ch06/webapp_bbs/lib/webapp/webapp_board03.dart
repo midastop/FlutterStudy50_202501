@@ -20,18 +20,6 @@ class WebAppBoard extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
         title: Text("WebApp Board"),
         centerTitle: true,
-        // 액션 버튼을 추가하고 - 홈 아이콘 버튼 
-        actions: [
-          IconButton(
-            // 홈 아이콘 버튼이 클릭되었을 때 게시 글 리스트로 이동
-            onPressed: () {
-              webViewController.loadRequest(
-                Uri.parse("http://192.168.0.104:8080/boardList"),
-              );
-            },
-            icon: Icon(Icons.home),
-          ),
-        ],
       ),
       body: WebViewWidget(
         controller: webViewController,
