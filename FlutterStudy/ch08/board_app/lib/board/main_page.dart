@@ -11,23 +11,20 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("메인 화면"),
-      ),
+      appBar: AppBar(title: Text("메인 화면")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, "/board/write");
+                Navigator.pushNamed(context, "/board/list");
               },
-              child: Text("게시글 목록 가기")
-            )
-          ]
+              child: Text("게시글 목록 가기"),
+            ),
+          ],
         ),
-      )
+      ),
     );
   }
 }
-

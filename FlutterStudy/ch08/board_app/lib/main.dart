@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       initialRoute: "/main",
-      routes: {
+      routes: { // 라우터 전용 클래스로 정리가 필요함
         "/main": (context) => MainPage(),
         "/board/list": (context) => BoardListPage(),
         "/board/detail": (context) => BoardDetailPage(),

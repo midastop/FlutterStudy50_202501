@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+// 2. 더미 데이터로 구성한 게시 글 리스트 페이지
+// 상세페이지 링크, FloatingActionButton 추가
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});
 
@@ -8,8 +10,6 @@ class BoardListPage extends StatefulWidget {
 }
 
 class _BoardListPageState extends State<BoardListPage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
