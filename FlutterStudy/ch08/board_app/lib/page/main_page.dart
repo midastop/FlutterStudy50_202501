@@ -20,7 +20,13 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {
                 Navigator.pushNamed(context, "/board/list");
               },
-              child: Text("게시글 목록 가기"),
+              child: Text("게시글 리스트"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/board/detail");
+              },
+              child: Text("게시글 상세보기"),
             ),
           ],
         ),

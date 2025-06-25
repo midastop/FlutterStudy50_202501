@@ -12,7 +12,7 @@ class _BoardUpdatePageState extends State<BoardUpdatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("게시 글 수정하기"),
+          title: Text("게시글 수정하기"),
         ),
         body: Center(
           child: Text("BoardUpdatePage"),

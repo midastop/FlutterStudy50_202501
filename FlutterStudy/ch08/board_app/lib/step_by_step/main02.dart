@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import "page/main_page.dart";
-import "board/board_list.dart";
-import "board/board_detail.dart";
-import "board/board_write.dart";
-import "board/board_update.dart";
-import "board/board_delete.dart";
+import "../board/board_list.dart";
+import "../board/board_detail.dart";
+import "../board/board_write.dart";
+import "../board/board_update.dart";
+import "../board/board_delete.dart";
 
 // 라우터 설정
 void main() {
@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/main",
       routes: {
-        // 라우터에 이름을 부여해 설정
         // 라우터 전용 클래스를 만들어 UI 소스에서 분리가 필요함
         // https://docs.flutter.dev/ui/navigation
         "/main": (context) => MainPage(),

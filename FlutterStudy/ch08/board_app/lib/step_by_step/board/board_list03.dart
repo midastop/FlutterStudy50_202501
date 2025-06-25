@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-// 2. 더미 데이터로 게시 글 리스트 페이지 구성하기
+// 2. 더미 데이터로 게시 글 리스트 UI 구성하기
 // 상세페이지 링크, FloatingActionButton 추가
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});
@@ -13,7 +13,7 @@ class _BoardListPageState extends State<BoardListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("게시 글 리스트")),
+      appBar: AppBar(title: Text("게시글 리스트")),
       body: Container(
         padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
         child: ListView.builder(

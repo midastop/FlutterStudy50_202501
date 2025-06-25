@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 
+// SpringBoot RestAPI 서버에서 데이터를 받아와 게시 글 리스트 UI 구성하기
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});
 
@@ -14,7 +15,7 @@ class _BoardListPageState extends State<BoardListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("게시 글 리스트"),
+          title: Text("게시글 리스트"),
         ),
         body: Container(
           padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),

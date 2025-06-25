@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 
+// 초기화 게시글 상세 페이지
 class BoardDetailPage extends StatefulWidget {
   const BoardDetailPage({super.key});
 
@@ -12,7 +13,7 @@ class _BoardDetailPageState extends State<BoardDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("게시 글 상세보기"),
+          title: Text("게시글 상세보기"),
         ),
         body: Center(
           child: Text("BoardDetailPage"),

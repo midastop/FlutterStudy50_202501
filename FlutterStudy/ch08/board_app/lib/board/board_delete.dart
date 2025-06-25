@@ -12,7 +12,7 @@ class _BoardDeletePageState extends State<BoardDeletePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("게시 글 삭제하기"),
+          title: Text("게시글 삭제하기"),
         ),
         body: Center(
           child: Text("BoardDeletePage"),
