@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 
+// 앱바 위젯 추가
 class WebAppBoard extends StatelessWidget {
   const WebAppBoard({super.key});
 

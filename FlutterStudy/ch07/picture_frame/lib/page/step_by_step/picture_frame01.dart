@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 
+// 초기 PageView에 이미지 출력
 class PictureFrame extends StatelessWidget {
   const PictureFrame({super.key});
 

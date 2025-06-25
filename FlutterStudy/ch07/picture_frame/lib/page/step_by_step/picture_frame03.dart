@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "dart:async"; // 타이머를 사용하기 위한 import
 
+// 타이머를 이용해 설정한 시간에 따라서 이미지 슬라이딩 구현 - 전자액자
 class PictureFrame extends StatefulWidget {
   const PictureFrame({super.key});
 
@@ -54,6 +55,7 @@ class _PictureFrameState extends State<PictureFrame> {
     return Scaffold(
       body: PageView(
         controller: pageController,
+        // map() 함수를 활용하면 중복 코드를 줄이고 효율적인 코드를 작성할 수 있음
         children: [1, 2, 3, 4, 5, 6, 7].map((num) {
           return Image.asset("asset/image$num.jpg", fit: BoxFit.cover);
         }).toList(),
