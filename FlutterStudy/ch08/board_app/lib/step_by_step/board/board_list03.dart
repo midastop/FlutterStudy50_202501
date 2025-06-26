@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-// 2. 더미 데이터로 게시 글 리스트 UI 구성하기
+// 3. 더미 데이터로 게시 글 리스트 UI 구성하기
 // 상세페이지 링크, FloatingActionButton 추가
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});

@@ -1,6 +1,6 @@
 
 class Board {
-  int no;
+  int? no;
   String title;
   String writer;
   String content;
@@ -10,7 +10,7 @@ class Board {
   String? file1;
 
   Board({
-    required this.no,
+    this.no,
     required this.title,
     required this.writer,
     required this.content,
