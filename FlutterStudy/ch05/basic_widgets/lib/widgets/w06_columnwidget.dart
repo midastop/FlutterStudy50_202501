@@ -16,9 +16,9 @@ class ColumnWidgetExam extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(width: 60.0, height: 60.0, color: Colors.red),
-            SizedBox(width: 10.0),
+            SizedBox(height: 10.0),
             Container(width: 60.0, height: 60.0, color: Colors.green),
-            SizedBox(width: 10.0),
+            SizedBox(height: 10.0),
             Container(width: 60.0, height: 60.0, color: Colors.blue),
           ],
         ),

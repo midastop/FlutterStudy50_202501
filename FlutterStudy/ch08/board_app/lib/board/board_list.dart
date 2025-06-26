@@ -15,7 +15,7 @@ class _BoardListPageState extends State<BoardListPage> {
     return Scaffold(
       appBar: AppBar(title: Text("게시글 리스트")),
       body: Container(
-        padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
+        //padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
         child: ListView.builder(
           itemCount: 10,
           itemBuilder: (context, index) {
@@ -37,7 +37,7 @@ class _BoardListPageState extends State<BoardListPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, "/board/insert");
+          Navigator.pushNamed(context, "/board/write");
         },
         child: const Icon(Icons.create),
       ),

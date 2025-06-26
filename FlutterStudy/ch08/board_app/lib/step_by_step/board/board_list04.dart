@@ -40,7 +40,7 @@ class _BoardListPageState extends State<BoardListPage> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            Navigator.pushNamed(context, "/board/insert");
+            Navigator.pushNamed(context, "/board/write");
           },
           child: const Icon(Icons.create)
       ),
