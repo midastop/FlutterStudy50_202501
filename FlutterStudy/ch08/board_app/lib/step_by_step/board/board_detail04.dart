@@ -3,7 +3,7 @@ import "package:http/http.dart" as http;
 import "dart:convert";
 import "../models/board_model.dart";
 
-// 3. 더미 데이터로 게시글 상세보기 UI 구성하기
+// 4. SpringBoot RestAPI 서버에서 데이터를 읽어와 게시글 상세보기 출력
 class BoardDetailPage extends StatefulWidget {
   const BoardDetailPage({super.key});
 
