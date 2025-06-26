@@ -5,7 +5,7 @@ import "package:http/http.dart" as http;
 import "dart:convert";
 import "package:intl/intl.dart";
 
-// 4. SpringBoot RestAPI 서버에서 데이터를 받아와 게시 글 리스트 UI 구성하기
+// 4. SpringBoot RestAPI 서버에서 데이터를 받아와 게시글 리스트 UI 구성하기
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});
 
@@ -15,7 +15,6 @@ class BoardListPage extends StatefulWidget {
 
 class _BoardListPageState extends State<BoardListPage> {
   // 게시글 리스트에서 사용되는 데이터 = 상태(state)라고 함
-  Map<String, dynamic> _resMap = {};
   List<dynamic> bList = [];
   int startPage = 1;
   int endPage = 10;
@@ -24,7 +23,7 @@ class _BoardListPageState extends State<BoardListPage> {
 
   // SpringBootRestAPI에 게시글 리스트를 요청하는 함수
   Future<Map<String, dynamic>> getBoardList() async {
-    // 게시글을 읽어올 SpringBoot RestAPI 서버 URL
+    // 게시글 리스트를 읽어올 SpringBoot RestAPI 서버 URL
     //Uri url = Uri.parse("http://192.168.0.16:8080/boards/");
     Uri url = Uri.parse("http://192.168.0.104:8080/boards/");
 
@@ -32,20 +31,19 @@ class _BoardListPageState extends State<BoardListPage> {
     final response = await http.get(url);
 
     // 응답 본문으로 받은 json 데이터를 Dart의 자료구조(객체)로 변환
-    var resMap = jsonDecode(response.body);
+    Map<String, dynamic> resMap = jsonDecode(response.body);
     print("resMap : ${resMap}");
 
     return resMap;
   }
 
-  // state 생성될 때 한 번 실행
+  // state가 생성될 때 한 번 실행
   @override
   void initState() {
     super.initState();
     getBoardList().then(
       (resMap) {
         setState(() {
-          //_resMap = resMap;
           bList = resMap["bList"];
           pageNum = resMap["currentPage"];
           startPage = resMap["startPage"];

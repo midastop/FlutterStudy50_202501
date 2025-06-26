@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:board_app/board/board_detail.dart";
 
-// 2. Navigator 페이지 이동 버튼이 있는 게시 글 리스트 페이지
+// 2. Navigator 페이지 이동 버튼이 있는 게시글 리스트 페이지
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});
 

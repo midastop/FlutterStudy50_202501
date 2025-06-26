@@ -5,7 +5,7 @@ import "package:http/http.dart" as http;
 import "dart:convert";
 import "package:intl/intl.dart";
 
-// 4. SpringBoot RestAPI 서버에서 데이터를 받아와 게시 글 리스트 UI 구성하기
+// 4. SpringBoot RestAPI 서버에서 데이터를 받아와 게시글 리스트 UI 구성하기
 class BoardListPage extends StatefulWidget {
   const BoardListPage({super.key});
 
@@ -24,7 +24,7 @@ class _BoardListPageState extends State<BoardListPage> {
 
   // SpringBootRestAPI에 게시글 리스트를 요청하는 함수
   Future<Map<String, dynamic>> getBoardList() async {
-    // 게시글을 읽어올 SpringBoot RestAPI 서버 URL
+    // 게시글 리스트를 읽어올 SpringBoot RestAPI 서버 URL
     //Uri url = Uri.parse("http://192.168.0.16:8080/boards/");
     Uri url = Uri.parse("http://192.168.0.104:8080/boards/");
 
