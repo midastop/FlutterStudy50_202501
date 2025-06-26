@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import "../board/board_list.dart";
-import "../board/board_detail.dart";
-import "../board/board_write.dart";
+import "package:board_app/board/board_list.dart";
+import "package:board_app/board/board_detail.dart";
+import "package:board_app/board/board_write.dart";
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

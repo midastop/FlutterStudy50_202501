@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "board_write.dart";
+import "package:board_app/board/board_write.dart";
 
 // Navigator 페이지 이동 버튼이 있는 게시글 상세 페이지
 class BoardDetailPage extends StatefulWidget {
