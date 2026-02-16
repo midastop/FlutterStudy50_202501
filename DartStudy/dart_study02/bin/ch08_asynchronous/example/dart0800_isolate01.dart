@@ -1,4 +1,4 @@
-// 동기 vs 비동기 - 이 예제는 교안에서 제외ch0700_isolate01.dart
+// 동기 vs 비동기 - 이 예제는 교안에서 제외ch0800_isolate01.dart
 /* 프로그램은 일반적으로 위에서 아래로 순차적으로 처리되는데 이렇게 순차적으로 처리하는 방식을
  * 동기(synchronous) 방식이라고 한다. 동기 방식은 프로그램이 실행되면 앞의 작업이 처리되고
  * 그 다음 작업으로 넘어간다. 이런 경우 시간이 많이 걸리는 작업이 앞에 있다면 다음에 실행할
@@ -14,6 +14,7 @@
  * isolate은 자바에서의 스레드와는 다르게 isolate 자체에 메모리를 가지는 구조이다.
  **/
 import "dart:isolate";
+
 void main() {
   // isolate는 spawn() 함수를 이용해 만들 수 있다.
   Isolate.spawn(isolateTest, 1);

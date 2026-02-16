@@ -1,5 +1,5 @@
 // 객체지향 상속 extends, implements 테스트
-import "dart0703_abstract01.dart";
+//import "dart0703_abstract01.dart";
 
 class Phone {
   String? name;
@@ -9,6 +9,7 @@ class Phone {
   }
 }
 
+// implements는 상위 클래스의 모든 맴버를 오버라이딩 해야 한다.
 class MyPhone1 implements Phone {
   @override
   String? name;
@@ -19,6 +20,7 @@ class MyPhone1 implements Phone {
   }
 }
 
+// extends는 오버라이딩이 필요 없이 상속받은 맴버를 그대로 사용할 수 있다.
 class MyPhone2 extends Phone {
   MyPhone2();
 }

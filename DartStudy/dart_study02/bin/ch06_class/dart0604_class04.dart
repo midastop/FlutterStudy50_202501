@@ -1,5 +1,6 @@
 // 프라이빗 변수와 게터와 세터
 import 'product.dart';
+
 class Student {
   /* 프라이빗 변수(private variable)
    * 다트는 자바와 같은 프로그래밍 언어에서 사용하는 접근 제어자(access modifier)가
@@ -18,8 +19,13 @@ void main() {
   print(s1._age);
 
   Product p = Product("컴퓨터", 100000);
-  // Product 클래스에서 name 변수의 게터를 만들었기 때문에 값을 읽어온다.
+  // Product 클래스에 _name, _price 변수의 게터를 만들었기 때문에 값을 읽어온다.
   print(p.name);
   print(p.price);
+  p.productInfo();
+
+  // Product 클래스에 _name, _price 변수의 세터를 만들었기 때문에 값을 설정할 수 있다.
+  p.name = "두쫀쿠";
+  p.price = 10000;
   p.productInfo();
 }

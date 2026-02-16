@@ -3,12 +3,7 @@
  * https://api.dart.dev/dart-core/Map-class.html
  **/
 void main() {
-
-  Map<String, int> map1 = {
-    "홍길동": 1,
-    "이순신": 4,
-    "강감찬": 2,
-  };
+  Map<String, int> map1 = {"홍길동": 1, "이순신": 4, "강감찬": 2};
   print(map1);
 
   // 빈 Map 객체를 생성하고 기존의 Map 객체를 데이터를 채움
@@ -23,7 +18,7 @@ void main() {
   print(map2.keys);
   print(map2.values);
 
-  // Map에 새로운 키를 지정해 데이터를 추가함
+  // Map에 새로운 키를 지정해 다음과 같이 새로운 데이터를 추가할 수 있다.
   map1["을지문덕"] = 3;
   print(map1);
 }

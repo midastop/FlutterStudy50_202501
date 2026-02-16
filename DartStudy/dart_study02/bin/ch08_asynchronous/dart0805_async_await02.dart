@@ -1,6 +1,6 @@
 // async와 await 02 - 반환 값이 있는 함수
-// https://dart-ko.dev/codelabs/async-await
-void order() async {
+// https://dart.dev/libraries/async/async-await
+void order() {
   print("음식을 주문 받음");
 }
 
@@ -31,16 +31,19 @@ void main() async {
    * 이때 future의 상태는 완료(completed) 상태가 된다. then() 함수의 첫 번째
    * 매개변수는 결과 값을 매개변수로 받는 익명 함수이며 두 번째 매개변수 onError는
    * 에러를 처리하기 위한 함수 이다.
+   * https://dart.dev/libraries/async/futures-error-handling
    **/
   Future<String> future = cooking();
-  future.then((result) {
-    order();
-    print(result);
-    complete();
-  },
-  onError: (e) {
-    print(e);
-  });
+  future.then(
+    (result) {
+      order();
+      print(result);
+      complete();
+    },
+    onError: (e) {
+      print(e);
+    },
+  );
 }
 /*
   //실행결과

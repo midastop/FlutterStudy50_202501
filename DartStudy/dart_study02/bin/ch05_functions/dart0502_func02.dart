@@ -1,6 +1,5 @@
 // 포지셔널 파리미터(positional parameter), 네임드 파라미터(named parameter)
 void main() {
-
   // 포지셔널 파라미터는 다음과 같이 순서에 맞게 인수를 지정해야 한다.
   print(studentInfo1("홍길동", 3));
 
@@ -37,6 +36,6 @@ String greeting1(String name, [int age = 20]) {
   return "안녕 $name 당신은 $age세 군요";
 }
 
-String greeting2({required String name, int age=20}) {
+String greeting2({required String name, int age = 20}) {
   return "안녕 $name 당신은 $age세 군요";
 }

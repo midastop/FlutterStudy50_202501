@@ -1,11 +1,15 @@
 // 메서드 재정의(override)
 import "../ch06_class/product.dart";
-class Computer extends Product{
+
+class Computer extends Product {
   String spec;
 
-  Computer(String name, int price, String spec)
-    : this.spec = spec,
-      super(name, price);
+  //Computer(String name, int price, String spec)
+  //  : this.spec = spec,
+  //    super(name, price);
+
+  // 다음과 같이 초기화 매개변수를 사용하면 보다 간결하게 생성자를 정의할 수 있다.
+  Computer(super.name, super.price, this.spec);
 
   /* 클래스, 변수, 메소드에 "@"으로 시작하는 키워드를 붙일 수 있는데 이런
    * 키워드를 어노테이션(annotation)이라고 부른다. 부모 클래스에서 상속 받은
@@ -22,11 +26,11 @@ class Computer extends Product{
 }
 
 void main() {
-  Computer com1 = Computer("컴퓨터1", 599000, "Core-i5 - 16Gb");
+  Computer com1 = Computer("컴퓨터1", 599000, "Core-i5 - 16GB");
   com1.productInfo();
 
   // 자식의 인스턴스를 부모 타입의 변수가 참조할 수 있다.
-  Product com2 = Computer("컴퓨터2", 799000, "Core-i7 - 16Gb");
+  Product com2 = Computer("컴퓨터2", 799000, "Core-i7 - 16GB");
 
   // 부모 타입의 변수이지만 실제 인스턴스는 자식 클래스의 인스턴스이므로
   // 자식 클래스에서 재정의한 메소드가 호출된다.

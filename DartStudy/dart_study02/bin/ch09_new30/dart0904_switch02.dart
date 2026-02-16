@@ -1,7 +1,7 @@
-// switch 문 - 패터 매칭
+// switch 문 - 패턴 매칭
 void matcher(dynamic any) {
   // switch 문에서 패턴 매칭을 통해서 복잡한 데이터를 조건으로 만들어 체크할 수 있다.
-  switch(any) {
+  switch (any) {
     case 'abc': // 문자열 "abc"와 매치
       print("match 'abc' : $any");
       break;

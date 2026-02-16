@@ -16,16 +16,13 @@ void main() {
   print("$a - $b - $c");
 
   // 객체를 구조 분해해서 다음과 같이 productName, productPrice 변수에 할당 할 수 있다.
-  final hong = Product(pName: "홍길동", price: 25);
-  final Product(pName: productName, price: productPrice) = hong;
+  final cal = Product(pName: "계산기", price: 25000);
+  final Product(pName: productName, price: productPrice) = cal;
   print("$productName - $productPrice");
 }
 
 class Product {
   String pName;
   int price;
-  Product({
-    required this.pName,
-    required this.price
-  });
+  Product({required this.pName, required this.price});
 }

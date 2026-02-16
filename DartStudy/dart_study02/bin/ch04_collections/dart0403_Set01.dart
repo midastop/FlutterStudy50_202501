@@ -22,7 +22,7 @@ void main() {
   print(fSet);
   print(Set.from(fruits));
 
-  // Set은 순서가 없기 때문에 index로 접근할 수 없다.
+  // Set은 순서를 보장하지 않기 인덱싱([])을 지원하지 않는다.
   //print(fSet[3]);
   print(fSet.elementAt(0));
 }
